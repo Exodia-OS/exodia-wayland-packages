@@ -1,0 +1,52 @@
+#
+# Maintainer: Mahmoud Mohamed (00xWolf) <mmsaeed509@gmail.com> , <https://github.com/mmsaeed509>
+#
+
+pkgname=eww-wayland
+_pkgname=eww
+pkgver=0.4.0
+pkgrel=1
+pkgdesc="A standalone widget system made in Rust."
+url='https://github.com/elkowar/eww'
+arch=('any')
+license=('MIT')
+provides=('eww')
+
+makedepends=(
+  
+  'rustup' 
+  'git'
+  
+  )
+
+depends=(
+
+  'gtk3' 
+  'gtk-layer-shell'
+  
+  )
+
+conflicts=(
+  
+  'eww-git' 
+  'eww'
+  
+  )
+
+# source=("git+${url}#tag=v${pkgver}")
+source=("${url}/archive/refs/tags/v${pkgver}.tar.gz")
+md5sums=('SKIP')
+
+build() {
+
+  cd ${srcdir}/${_pkgname}-${pkgver}
+  cargo build --release --no-default-features --features=wayland
+
+}
+
+package() {
+  
+  install -Dm755 ${srcdir}/${_pkgname}-${pkgver}/target/release/eww "${pkgdir}/usr/bin/${_pkgname}"
+  install -Dm644 ${srcdir}/${_pkgname}-${pkgver}/LICENSE "${pkgdir}/usr/share/licenses/${_pkgname}/LICENSE"
+  
+}
