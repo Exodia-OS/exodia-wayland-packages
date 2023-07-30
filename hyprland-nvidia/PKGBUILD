@@ -52,9 +52,9 @@ options=(!makeflags !buildflags !strip)
 
 build() {
 
-	cd "$srcdir"
+	cd "$srcdir/hyprland-source"
 	make fixwlr
-	patch --directory="$srcdir/subprojects/wlroots/" --forward --strip=0 \
+	patch --directory="$srcdir/hyprland-source/subprojects/wlroots/" --forward --strip=0 \
 		--input="${srcdir}/../nvidia.patch"
 	cd "./subprojects/wlroots/" && meson build/ --prefix="${srcdir}/tmpwlr" --buildtype=release && ninja -C build/ && mkdir -p "${srcdir}/tmpwlr" && ninja -C build/ install && cd ../../
 	make protocols
