@@ -1,0 +1,5 @@
+/home/o0xwolf/GitHub/Exodia-Repos/exodia-wayland-packages/hyprland-nvidia/Build/src/hyprland-source/build/CMakeFiles/Hyprland.dir
+/home/o0xwolf/GitHub/Exodia-Repos/exodia-wayland-packages/hyprland-nvidia/Build/src/hyprland-source/build/CMakeFiles/package.dir
+/home/o0xwolf/GitHub/Exodia-Repos/exodia-wayland-packages/hyprland-nvidia/Build/src/hyprland-source/build/CMakeFiles/package_source.dir
+/home/o0xwolf/GitHub/Exodia-Repos/exodia-wayland-packages/hyprland-nvidia/Build/src/hyprland-source/build/CMakeFiles/edit_cache.dir
+/home/o0xwolf/GitHub/Exodia-Repos/exodia-wayland-packages/hyprland-nvidia/Build/src/hyprland-source/build/CMakeFiles/rebuild_cache.dir
